@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+// === VARIABLES ===
+$aux : #00ff6eb9;
+$black:#0d0d0d;
+$light-bg:#1a1a1a;
+$white:#fff;
+$light-color:#aaa;
+$box-shadow:0 .5rem 1rem rgba(0,0,0,.7);
+$font : 'Poppins', sans-serif;
+
+* {
+    font-family: $font;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap:1.5rem;
+}
+
+html {
+    // 1rem = 10px
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar{
+        width: 1rem;;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: $black;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: $aux;
+        border-radius: 5rem;
+    }
+}
+
+body {
+    background: $black;
+    padding-bottom: 6.5rem;
+}
+
+section {
+    padding: 5rem 9%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 6vw;
+    color:$white;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+
+    span{
+        text-transform: uppercase;
+        color:$aux;
+    }
+}
+
+/* === BUTTONS === */
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $aux;
+    color:$white;
+    border-radius: 5rem;
+    font-size: 1.7rem;
+    padding:.7rem;
+    margin-top: 1rem;
+    padding-left: 2rem;
+    
+    .icon {
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $white;
+        padding: .5rem;
+        transition: .2s linear;
+        padding: 1rem;
+
+        i {
+            color:$aux;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .icon {
+            margin-left: 2rem;
+        }
+    }
+}
+
+/* === NAVBAR === */
+.navbar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    display: flex;
+    z-index: 100;
+    align-items: flex-end;
+    justify-content: space-around;
+    
+    a{
+        padding:2rem;
+        font-size: 2rem;
+        color:$white;
+        background: $light-bg;
+        transition: .2s linear;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        div {
+            display: flex;
+            align-items: center;
+            margin-right: 1rem;
+
+            i {
+                color: $aux;
+            }
+        }
+
+        &:hover {
+            background: $aux;
+            padding-bottom: 6rem;
+            border-radius: 10px 10px 0 0;
+
+            i {
+                color: $white;
+            }
+        }
+    }
+}
+
+/* === ANIMATION NEON === */
+@keyframes neon {
+    0% {
+        box-shadow: 0 0 3rem 0 $aux;
+    }
+    50% {
+        box-shadow: 0 0 0 0 $aux;
+    }
+    100% {
+        box-shadow: 0 0 3rem 0 $aux;
+    }
+}
+
+/* === HOME === */
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    min-height: calc(100vh - 6.5rem);
+
+    .image {
+        flex:1 1 42rem;
+        text-align: center;
+
+        img {
+            height: 40rem;
+            width: 40rem;
+            border-radius: 50%;
+            box-shadow: 0 0 3rem 0 $aux;
+            animation: neon infinite 3s linear;
+        }
+    }
+
+    .content {
+        flex:1 1 42rem;
+
+        h3 {
+            color: $white;
+            font-size: 4rem;
+            padding-bottom: .5rem;
+        }
+
+        .typed {
+            font-size: 4.5rem;
+            color: $aux;
+            padding: .5rem 0;
+            display: block;
+        }
+        
+        p {
+            font-size: 1.5rem;
+            color: $light-color;
+            padding: 1rem 0;
+            line-height: 2;
+        }
+    }
+}
