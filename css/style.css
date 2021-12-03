@@ -253,3 +253,54 @@ section {
         line-height: 2; }
     .education .box-container .box div a {
       padding: 1rem 5rem; }
+      .education .box-container .box div a:hover {
+        background-color: #fff;
+        color: #0ac25a; }
+
+/* === PORTFOLIO === */
+.portfolio {
+  text-align: center; }
+  .portfolio .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem; }
+    .portfolio .box-container .box {
+      height: 30rem;
+      overflow: hidden;
+      position: relative; }
+      .portfolio .box-container .box:hover .content {
+        transform: translateY(0%); }
+      .portfolio .box-container .box img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
+      .portfolio .box-container .box .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #1a1a1a;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        transform: translateY(-100%);
+        transition: .2s linear; }
+        .portfolio .box-container .box .content h3 {
+          font-size: 2.5rem;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: normal; }
+        .portfolio .box-container .box .content p {
+          padding: 1rem 0;
+          font-size: 1.5rem;
+          line-height: 2;
+          color: #aaa; }
+        .portfolio .box-container .box .content a {
+          font-size: 2rem;
+          color: #0ac25a; }
+          .portfolio .box-container .box .content a:hover {
+            color: #fff; }
