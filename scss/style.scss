@@ -10,6 +10,31 @@ $light-color:#aaa;
 $box-shadow:0 .5rem 1rem rgba(0,0,0,.7);
 $font : 'Poppins', sans-serif;
 
+/* === ANIMATION NEON === */
+@keyframes neon {
+    0% {
+        box-shadow: 0 0 3rem 0 $aux;
+    }
+    50% {
+        box-shadow: 0 0 0 0 $aux;
+    }
+    100% {
+        box-shadow: 0 0 3rem 0 $aux;
+    }
+}
+
+@keyframes neonLogo {
+    0% {
+        filter: drop-shadow(0 0 1rem $aux2);
+    }
+    50% {
+        filter: drop-shadow(0 0 0 $aux2);
+    }
+    100% {
+        filter: drop-shadow(0 0 1rem $aux2);
+    }
+}
+
 * {
     font-family: $font;
     margin:0; padding:0;
@@ -47,6 +72,16 @@ html {
 body {
     background: $black;
     padding-bottom: 6.5rem;
+}
+
+.logo {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+
+    a {
+        animation: neonLogo infinite 3s linear;
+    }
 }
 
 section {
@@ -134,19 +169,6 @@ section {
                 color: $white;
             }
         }
-    }
-}
-
-/* === ANIMATION NEON === */
-@keyframes neon {
-    0% {
-        box-shadow: 0 0 3rem 0 $aux;
-    }
-    50% {
-        box-shadow: 0 0 0 0 $aux;
-    }
-    100% {
-        box-shadow: 0 0 3rem 0 $aux;
     }
 }
 
@@ -546,6 +568,11 @@ section {
                     background: $white;
                     color: $black;
                 }
+            }
+
+            .buttons-form {
+                display: flex;
+                justify-content: space-between;
             }
         }
     }

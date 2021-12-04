@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+/* === ANIMATION NEON === */
+@keyframes neon {
+  0% {
+    box-shadow: 0 0 3rem 0 #00ff6eb9; }
+  50% {
+    box-shadow: 0 0 0 0 #00ff6eb9; }
+  100% {
+    box-shadow: 0 0 3rem 0 #00ff6eb9; } }
+
+@keyframes neonLogo {
+  0% {
+    filter: drop-shadow(0 0 1rem #0ac25a); }
+  50% {
+    filter: drop-shadow(0 0 0 #0ac25a); }
+  100% {
+    filter: drop-shadow(0 0 1rem #0ac25a); } }
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -23,6 +40,13 @@ html {
 body {
   background: #0d0d0d;
   padding-bottom: 6.5rem; }
+
+.logo {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem; }
+  .logo a {
+    animation: neonLogo infinite 3s linear; }
 
 section {
   padding: 5rem 9%; }
@@ -93,15 +117,6 @@ section {
       border-radius: 10px 10px 0 0; }
       .navbar a:hover i {
         color: #fff; }
-
-/* === ANIMATION NEON === */
-@keyframes neon {
-  0% {
-    box-shadow: 0 0 3rem 0 #00ff6eb9; }
-  50% {
-    box-shadow: 0 0 0 0 #00ff6eb9; }
-  100% {
-    box-shadow: 0 0 3rem 0 #00ff6eb9; } }
 
 /* === HOME === */
 .home {
@@ -377,6 +392,9 @@ section {
       .contact .row form .btn:hover {
         background: #fff;
         color: #0d0d0d; }
+    .contact .row form .buttons-form {
+      display: flex;
+      justify-content: space-between; }
 
 /* ========= MEDIA QUERIES ========= */
 /* ========= MAX-WIDTH 1200PX ========= */

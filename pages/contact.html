@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/logo.svg" type="image/x-icon">
 
     <!-- ========== font-awesome cdn link ========== -->
     <script defer src="https://kit.fontawesome.com/619b76259a.js" crossorigin="anonymous"></script>
@@ -12,10 +12,17 @@
     <!-- ========== custom css file link ========== -->
     <link rel="stylesheet" href="../css/style.css">
     
-    <title>Kevin's Portfolio - about me</title>
+    <title>Kevin's Portfolio - contacto</title>
 </head>
 <body>
-    
+    <!-- ========== logo starts ========== -->
+    <div class="logo">
+        <a href="../index.html">
+            <img src="../images/logo.svg" alt="logo">
+        </a>
+    </div>
+    <!-- ========== logo ends ========== -->
+
     <!-- ========== nav section starts ========== -->
     <nav class="navbar">
         <a href="../index.html">
@@ -40,7 +47,7 @@
             <div class="icon">
                 <i class="fas fa-address-book"></i>
             </div>
-            <span>contact</span>
+            <span>contacto</span>
         </a>
     </nav>
     <!-- ========== nav section ends ========== -->
@@ -52,7 +59,7 @@
         <div class="row">
             <div class="info-container">
                 <h1>ponte en contacte conmigo</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolorem sunt sapiente vel minus eaque voluptate fugit corrupti omnis tempora?</p>
+                <p>no hay problema que no podamos resolver juntos! <br>no dudes en contactarme.</p>
 
                 <div class="box-container">
                     <div class="box">
@@ -81,28 +88,29 @@
                 </div>
 
                 <div class="share">
-                    <a href="#" class="fab fa-facebook-f"></a>
-                    <a href="#" class="fab fa-twitter"></a>
-                    <a href="#" class="fab fa-instagram"></a>
-                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="https://github.com/KeviinPoncee" target="blank" class="fab fa-github-alt"></a>
+                    <a href="https://www.linkedin.com/in/keviin-poncee/" target="blank" class="fab fa-linkedin"></a>
                 </div>
 
             </div>
 
-            <form action="">
+            <form action="https://formspree.io/f/xknywlwb" method="POST">
                 <div class="inputBox">
-                    <input type="text" placeholder="nombre y apellido">
-                    <input type="number" placeholder="número de contacto">
+                    <input type="text" placeholder="Nombre y apellido" required name="nombre">
+                    <input type="number" placeholder="Número de contacto" required name="telefono">
                 </div>
 
                 <div class="inputBox">
-                    <input type="email" placeholder="email">
-                    <input type="text" placeholder="asunto">
+                    <input type="email" placeholder="Email" required name="mail">
+                    <input type="text" placeholder="Asunto" required name="asunto">
                 </div>
 
-                <textarea name="" placeholder="mensaje" id="" cols="30" rows="10"></textarea>
+                <textarea name="message" placeholder="Mensaje ..." id="" cols="30" rows="10" required></textarea>
 
-                <input type="submit" value="enviar mensaje" class="btn">
+                <div class="buttons-form">
+                    <input type="reset" value="restablecer" class="btn reset-form">
+                    <input type="submit" value="enviar mensaje" class="btn">
+                </div>
             </form>
         </div>
     </section>
